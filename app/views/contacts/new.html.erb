@@ -1,0 +1,27 @@
+<h1>Novo Contato</h1>
+
+<%= form_for :contact, url: contacts_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %> (opcional)
+  </p>
+
+  <p>
+    <%= f.label :adress %><br>
+    <%= f.text_field :adress %> (opcional)
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
