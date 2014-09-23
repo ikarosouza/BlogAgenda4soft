@@ -1,4 +1,4 @@
-<h1>Editar contato #<%= @article.id %></h1>
+<h1>Editar contato</h1>
  
 <%= form_for :contact, url: contact_path(@contact), method: :patch do |f| %>
   <% if @contact.errors.any? %>
@@ -37,4 +37,4 @@
   </p>
 <% end %>
  
-<%= link_to 'Back', acontact_path %>
+<%= link_to 'Back', contact_path %>
