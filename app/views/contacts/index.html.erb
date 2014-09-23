@@ -2,18 +2,20 @@
  
 <table>
   <tr>
+    <th>#ID</th>
     <th>Nome</th>
-    <th>Telefone</th>
-    <th>E-mail</th>
-    <th>Endereco</th>
   </tr>
  
   <% @contacts.each do |contact| %>
     <tr>
+      <td>#<%= contact.id %></td>
       <td><%= contact.name %></td>
-      <td><%= contact.phone %></td>
-      <td><%= contact.email %></td>
-      <td><%= contact.adress %></td>
+      <td><%= link_to 'Ver', contact_path(contact) %></td>
+      <td><%= link_to 'Editar', edit_contact_path(contact) %></td>
     </tr>
   <% end %>
 </table>
+
+</p>
+<%= link_to 'Novo Contato', new_contact_path %>
+<%= link_to 'Home', controller: 'welcome' %>
