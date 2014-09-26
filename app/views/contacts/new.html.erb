@@ -1,40 +1,5 @@
 <h1>Novo Contato</h1>
 
-<%= form_for :contact, url: contacts_path do |f| %> 
-  <% if @contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited
-        this contact from being saved:</h2>
-      <ul>
-      <% @contact.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %> 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </p>
-
-  <p>
-    <%= f.label :email %><br>
-    <%= f.text_field :email %> (opcional)
-  </p>
-
-  <p>
-    <%= f.label :adress %><br>
-    <%= f.text_field :adress %> (opcional)
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <%= link_to 'Voltar', contacts_path %> 

@@ -1,0 +1,5 @@
+</p>
+  <strong>Nota #<%= note.id%>:</strong></br>
+  <%= note.text %><br>
+  <%= link_to 'Excluir Nota', [note.contact, note], method: :delete, data: { confirm: 'Tem certeza?' } %>
+</p>

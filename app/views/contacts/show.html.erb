@@ -13,5 +13,13 @@
 <strong>Endereco:</strong>
 <%= @contact.adress %></br>
 
-<%= link_to 'Editar', edit_contact_path(@contact) %></br>
+<%= link_to 'Editar', edit_contact_path(@contact) %> 
+<%= link_to 'Deletar', contact_path(@contact), method: :delete, data: { confirm: 'Tem certeza?' } %></br>
+
+<h2>Notas</h2>
+<%= render @contact.notes %>
+
+<h2>Adcionar nota:</h2>
+<%= render "notes/form" %>
+
 <%= link_to 'Voltar', contacts_path %>
