@@ -1,3 +1,13 @@
-<h1>BlogAgenda</h1>
-<p>Mantenha seus contatos salvos, tudo online!</p>
-<%= link_to 'Agenda', controller: 'contacts' %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<div class="col-md-4 col-md-offset-4">
+	<h1 class="text-center">BlogAgenda</h1>
+	<p class="text-center">Mantenha seus contatos salvos, tudo online!</p>
+</div>
+
+<div class="col-md-1 col-md-offset-5">
+	<button type="button" class="btn btn-default btn-lg">
+		<span class="glyphicon glyphicon-list-alt"></span>
+		<%= link_to 'Agenda', controller: 'contacts' %>
+	</button>
+</div>
