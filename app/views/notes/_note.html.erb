@@ -1,5 +1,9 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </p>
-  <strong>Nota #<%= note.id%>:</strong></br>
+  <strong>Nota #<%= note.id%>:</strong>
   <%= note.text %><br>
-  <%= link_to 'Excluir Nota', [note.contact, note], method: :delete, data: { confirm: 'Tem certeza?' } %>
+  <button type="button" class="btn btn-default btn-lg btn-sm">
+  	<span class="glyphicon glyphicon-remove"></span>
+  	<%= link_to 'Excluir Nota', [note.contact, note], method: :delete, data: { confirm: 'Tem certeza?' } %>
+  </button>
 </p>

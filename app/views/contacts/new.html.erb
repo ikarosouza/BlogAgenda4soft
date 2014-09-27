@@ -1,5 +1,12 @@
-<h1>Novo Contato</h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<h1 class="text-center">Novo Contato</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Voltar', contacts_path %> 
+<div class="col-md-2 col-md-offset-5">
+  <button type="button" class="btn btn-default btn-lg btn-block">
+  		<span class="glyphicon glyphicon-circle-arrow-left"></span>
+		<%= link_to 'Voltar', contacts_path %>
+	</button>
+</div>

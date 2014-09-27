@@ -1,25 +1,34 @@
-<h1>Mostrando Contato <%= @contact.id %> </h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<h1 class="text-center"><%= @contact.name %> </h1>
 
-</p>
-<strong>Nome:</strong>
-<%= @contact.name %></br>
+<div class="col-md-4 col-md-offset-5">
+	</p>
+	<strong>Telefone:</strong>
+	<%= @contact.phone %></br>
 
-<strong>Telefone:</strong>
-<%= @contact.phone %></br>
+	<strong>E-mail:</strong>
+	<%= @contact.email %></br>
 
-<strong>E-mail:</strong>
-<%= @contact.email %></br>
+	<strong>Endereco:</strong>
+	<%= @contact.adress %></br>
+	<button type="button" class="btn btn-default btn-lg btn-sm">
+		<span class="glyphicon glyphicon-edit"></span>
+		<%= link_to 'Editar', edit_contact_path(@contact) %> 
+	</button>
+	<button type="button" class="btn btn-default btn-lg btn-sm">
+		<span class="glyphicon glyphicon-remove"></span>
+		<%= link_to 'Deletar', contact_path(@contact), method: :delete, data: { confirm: 'Tem certeza?' } %></br>
+	</button>
+	<h2>Notas</h2>
+	<%= render @contact.notes %>
 
-<strong>Endereco:</strong>
-<%= @contact.adress %></br>
+	<h2>Adcionar nota:</h2>
+	<%= render "notes/form" %>
+</div>
 
-<%= link_to 'Editar', edit_contact_path(@contact) %> 
-<%= link_to 'Deletar', contact_path(@contact), method: :delete, data: { confirm: 'Tem certeza?' } %></br>
-
-<h2>Notas</h2>
-<%= render @contact.notes %>
-
-<h2>Adcionar nota:</h2>
-<%= render "notes/form" %>
-
-<%= link_to 'Voltar', contacts_path %>
+<div class="col-md-2 col-md-offset-5">
+  <button type="button" class="btn btn-default btn-lg btn-block">
+  		<span class="glyphicon glyphicon-circle-arrow-left"></span>
+		<%= link_to 'Voltar', contacts_path %>
+	</button>
+</div>
